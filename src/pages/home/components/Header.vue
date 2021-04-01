@@ -35,19 +35,19 @@ export default {
       font-size: .32rem
   .header-input
     flex: 1
-    height :.60rem
-    line-height :.60rem
-    padding-left :.2rem
-    margin-top :.15rem
-    margin-left :.20rem
+    height: .60rem
+    line-height: .60rem
+    padding-left: .2rem
+    margin-top: .15rem
+    margin-left: .20rem
     background: #fff
-    border-radius :.1rem
-    color : #ccc
+    border-radius: .1rem
+    color: #ccc
   .header-right
     width: 1.24rem
     float: right
     text-align: center
     .arrow-icon
-      font-size : .24rem
-      padding-left :.1rem
+      font-size: .24rem
+      padding-left: .1rem
 </style>
