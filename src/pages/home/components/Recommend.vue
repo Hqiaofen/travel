@@ -2,7 +2,7 @@
   <div>
       <div class="recommend-title">热销推荐</div>
       <ul>
-        <li class="item" v-for="item of recommendList" :key="item.id">
+        <li class="item" v-for="item of list" :key="item.id">
           <!-- 热销推荐的图片 -->
           <img class="item-img"
           :src="item.imgUrl"/>
@@ -20,26 +20,29 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1901/3c/3cbe7f7c05d2f87aa3.img.jpg_200x200_c393415d.jpg',
-        title: '福建福州平潭海坛古城',
-        desc: '来一次说走就走的旅行'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/2005/c9/c95ecb375175dac9a3.img.jpg_200x200_ac0be772.jpg',
-        title: '福建福州连江奇达村',
-        desc: '世界很大，要出去看看'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/201305/23/a346e9bd7f4dc220c8d65eac.jpg_200x200_1fbabfc0.jpg',
-        title: '福建福州鼓山',
-        desc: '看日出日落的好地方哦'
-      }]
-    }
+  props: {
+    list: Array
   }
+  // data () {
+  //   return {
+  //     recommendList: [{
+  //       id: '0001',
+  //       imgUrl: 'http://img1.qunarzz.com/sight/p0/1901/3c/3cbe7f7c05d2f87aa3.img.jpg_200x200_c393415d.jpg',
+  //       title: '福建福州平潭海坛古城',
+  //       desc: '来一次说走就走的旅行'
+  //     }, {
+  //       id: '0002',
+  //       imgUrl: 'http://img1.qunarzz.com/sight/p0/2005/c9/c95ecb375175dac9a3.img.jpg_200x200_ac0be772.jpg',
+  //       title: '福建福州连江奇达村',
+  //       desc: '世界很大，要出去看看'
+  //     }, {
+  //       id: '0003',
+  //       imgUrl: 'http://img1.qunarzz.com/sight/p0/201305/23/a346e9bd7f4dc220c8d65eac.jpg_200x200_1fbabfc0.jpg',
+  //       title: '福建福州鼓山',
+  //       desc: '看日出日落的好地方哦'
+  //     }]
+  //   }
+  // }
 }
 </script>
 
