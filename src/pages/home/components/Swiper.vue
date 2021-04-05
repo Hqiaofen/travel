@@ -36,7 +36,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scope>
+<style lang="stylus" scoped>
   .wrapper
     overflow: hidden
     width: 100%
