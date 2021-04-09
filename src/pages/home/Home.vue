@@ -35,12 +35,14 @@ export default {
     }
   },
   computed: {
-    ...mapState(['city'])
+    ...mapState({
+      homeCity: 'city'
+    })
   },
   methods: {
     getHomeInfo () {
       // 发送请求,显示首页信息
-      axios.get('/api/index.json' + this.city).then(this.getHomeInfoSucc)
+      axios.get('/api/index.json?city=' + this.homeCity).then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
       res = res.data
@@ -55,12 +57,12 @@ export default {
     }
   },
   mounted () {
-    this.lastCity = this.city
+    this.lastCity = this.homeCity
     this.getHomeInfo()
   },
   activated () {
-    if (this.lastCity !== this.city) {
-      this.lastCity = this.city
+    if (this.lastCity !== this.homeCity) {
+      this.lastCity = this.homeCity
       this.getHomeInfo()
     }
   }

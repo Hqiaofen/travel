@@ -53,8 +53,8 @@ export default {
   },
   methods: {
     handleCityClick (city) {
-      // this.$store.commit('changeCity', city)
-      this.changCity(city)
+      this.$store.commit('changeCity', city)
+      // this.changCity(city)
       this.$router.push('/')
     },
     ...mapMutations(['changCity'])
