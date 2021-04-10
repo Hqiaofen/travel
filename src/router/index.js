@@ -19,6 +19,9 @@ export default new Router({
     path: '/detail/:id',
     name: 'detail',
     component: Detail
+  }],
+  scrollBehavior (to, from, savedPosition) {
+    // 始终滚动到顶部
+    return { x: 0, y: 0 }
   }
-  ]
 })
